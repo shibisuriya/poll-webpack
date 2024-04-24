@@ -2,6 +2,8 @@ import React, { Fragment, useEffect } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { initializeApp, getApp } from "firebase/app";
 
+import Builder from "./builder";
+
 // Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -52,15 +54,5 @@ export default function App() {
   //     });
   // }, []);
 
-  return (
-    <Fragment>
-      <div>{name} 1. This is my name</div>
-      <div>
-        <bdi>{name}</bdi> 1. This is my name
-      </div>
-      <div>
-        <span style={{ unicodeBidi: "isolate" }}>{name}</span> 4
-      </div>
-    </Fragment>
-  );
+  return <Builder />;
 }
